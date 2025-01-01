@@ -1,9 +1,10 @@
-const express = require("express");
+import express from "express"
 const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 
-const indexRouter = require("./index");
+import indexRouter from "./index.js";
+
 app.use("/", indexRouter);
 
 app.listen(3000, () => console.log("running"));
